@@ -8,7 +8,7 @@ require('bootstrap');
 $(document).ready(function() {
   $('#sidebar').affix({
     offset: {
-      top: 411
+      top: 430
     }
   });
 
