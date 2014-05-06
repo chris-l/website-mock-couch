@@ -1,0 +1,28 @@
+.jumbotron
+  .container
+    .row
+      .col-md-7
+        h1
+          img(src='/img/title.png', alt='The Mock Couch')
+          p.lead Mock a CouchDB server for unit testing CouchDB based apps.
+          p
+            a(href='https://travis-ci.org/chris-l/mock-couch')
+              img(src='https://travis-ci.org/chris-l/mock-couch.png?branch=master')
+      .col-md-5
+        img(src='/img/mock-couch.svg', alt='A photo of a Mock Couch', title='"It\'s the thing Mock Couch Soup is made from," said the Queen.')
+.container
+  .row
+    #leftCol.col-md-3
+      ul#sidebar.nav.nav-stacked
+        li
+          a(href='#installation') Installation
+        li
+          a(href='#sec1') Section 1
+        li
+          a(href='#sec2') Section 2
+        li
+          a(href='#sec3') Section 3
+        li
+          a(href='#sec4') Section 4
+    .col-md-9
+      != partial('/_content/txt')

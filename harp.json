@@ -1,0 +1,8 @@
+{
+  "globals": {
+    "name": "mockcouch",
+    "description" : "a-nodejs-module-designed-to-mock-a-couchdb-database-mostly-for-unit-testing-purposes",
+    "google_analytics" : ""
+  }
+}
+

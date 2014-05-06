@@ -1,0 +1,32 @@
+@import "../../bower_components/bootstrap/less/bootstrap.less";
+@import "../../bower_components/less-elements/elements.less";
+
+// Put your styles here
+@bar: #3F4449;
+@bg: #E7E7E7;
+@mainbg: #545A61;
+@maintxt: rgb(181, 185, 202);
+
+body {
+  background-color: @bg;
+}
+.jumbotron {
+  background-color: @mainbg;
+  color: @maintxt;
+}
+.navbar-inverse {
+  background-color: @bar;
+}
+@media (min-width: 979px) {
+  #sidebar.affix-top {
+    position: static;
+    margin-top:30px;
+    width:228px;
+  }
+
+  #sidebar.affix {
+    position: fixed;
+    top:70px;
+    width:228px;
+  }
+}
