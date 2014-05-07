@@ -16,6 +16,7 @@
   "browser": {
     "jquery": "./bower_components/jquery/dist/jquery.js",
     "bootstrap": "./bower_components/bootstrap/dist/js/bootstrap.js",
+    "prism": "./bower_components/prismjs/prism.js",
     "modernizr": "./bower_components/modernizr/modernizr.js"
   },
   "browserify-shim": {
@@ -25,6 +26,7 @@
         "jquery:$"
       ]
     },
+    "prism" : "Prism",
     "modernizr" : "Modernizr"
   }
 }

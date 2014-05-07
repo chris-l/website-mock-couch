@@ -2,6 +2,7 @@
 /*global document */
 'use strict';
 require('modernizr');
+require('prism');
 var $ = require('jquery');
 
 require('bootstrap');
