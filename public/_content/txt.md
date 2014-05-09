@@ -8,6 +8,7 @@ Mock Couch emit events, so you can listen to them to see the result of your test
 
 The project is hosted on [GitHub](https://github.com/chris-l/mock-couch). You can report bugs and discuss features on the [issues page](https://github.com/chris-l/mock-couch/issues)
 
+<a name="installation"></a>
 ## Installation
 
 ```
