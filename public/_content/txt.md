@@ -11,6 +11,8 @@ The project is hosted on [GitHub](https://github.com/chris-l/mock-couch). You ca
 <a name="installation"></a>
 ## Installation
 
+Mock Couch is available as an [npm module](https://www.npmjs.org/package/mock-couch).
+
 ```
 npm install --save-dev mock-couch
 ```
