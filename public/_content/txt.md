@@ -17,6 +17,35 @@ Mock Couch is available as an [npm module](https://www.npmjs.org/package/mock-co
 npm install --save-dev mock-couch
 ```
 
+<a name="views"></a>
+### Views
+
+Mock Couch allows to create and use views.
+
+To create a view, just create the `_design/*` document, just like you would create any other document, but with the difference that the `map` and `reduce` functions should be created as _as regular functions_ - that is, not as strings.
+
+This is an example:
+```javascript
+mockCouch.addDoc('mydatabase', {
+  _id: '_design/myviews',
+  views : {
+    someview : {
+      map : function(doc) {
+        emit(null, { amount : doc._id });
+      },
+      reduce : function(keys, values, rereduce) {
+        return values.reduce(function(a,b) {
+          return a + b.amount;
+        }, '');
+      }
+    }
+  }
+});
+```
+
+Then you can try the view from `http://localhost:5984/mydatabase/_design/myviews/_view/someview/`
+
+
 ## Features
 
 * Implemented with [restify](https://github.com/mcavage/node-restify).
