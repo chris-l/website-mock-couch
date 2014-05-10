@@ -7,6 +7,7 @@
 @bg: #E7E7E7;
 @mainbg: #D3D6DB;
 @maintxt: #8C90A2;
+@h2: rgb(97, 122, 145);
 
 body {
   background-color: @bg;
@@ -14,6 +15,10 @@ body {
 h1,h2,h3,h4 {
   padding-top: 60px;
   margin-top: -60px;
+}
+code {
+  color: #646464;
+  background-color: #f5f5f5;
 }
 .jumbotron {
   background-color: @mainbg;
@@ -34,5 +39,21 @@ h1,h2,h3,h4 {
     position: fixed;
     top:70px;
     width:228px;
+  }
+  a[name] {
+    display: block;
+    margin-top: 50px;
+  }
+  h2 {
+    color: @h2;
+    font-size: 35px;
+  }
+  h3 {
+    border-bottom: 1px solid black;
+    font-size: 22px;
+    padding-bottom: 2px;
+    code {
+      font-size: 60%;
+    }
   }
 }

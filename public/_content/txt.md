@@ -20,6 +20,27 @@ Mock Couch is available as an [npm module](https://www.npmjs.org/package/mock-co
 npm install --save-dev mock-couch
 ```
 
+<a name="create"></a>
+## Create a Mock Couch Instance
+
+To create an instance, it's necesary to require the module, and then call the `createServer()` method.
+
+```javascript
+var mock = require('mock-couch');
+```
+
+The returned object is the **mock couch** instance, where the databases and documents should be added.
+
+Once is that is done, its necessary to start the server by calling the `listen()` method.
+
+<a name="createServer"></a>
+### createServer `mock.createServer()`
+
+Returns an object representing the **mock couch** instance.
+```javascript
+var mockCouch = mock.createServer();
+```
+
 <a name="views"></a>
 ### Views
 
