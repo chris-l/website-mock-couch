@@ -8,8 +8,8 @@ html.no-js
     meta(name='description', content='#{ description }')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     //- Place favicon.ico and apple-touch-icon(s) in the root directory
-    link(rel='shortcut icon', href='/favicon.png')
-    link(rel='stylesheet', href='/css/styles.css')
+    link(rel='shortcut icon', href='favicon.png')
+    link(rel='stylesheet', href='css/styles.css')
   body
     //- You can put your base design here
     header.navbar.navbar-inverse.navbar-fixed-top(role='banner')
@@ -38,7 +38,7 @@ html.no-js
     //- use yield instead.
     != partial( (current.path.slice(0, -1).join('/') || '') + '/_sublayout') || yield
 
-    script(src='/js/main.min.js')
+    script(src='js/main.min.js')
     //- For google analytics to work, just include your GA code in the harp.json file.
     if google_analytics != ''
       script.
