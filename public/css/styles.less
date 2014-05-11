@@ -14,7 +14,7 @@ body {
 }
 h1,h2,h3,h4 {
   padding-top: 60px;
-  margin-top: -60px;
+  margin-top: -35px;
 }
 code {
   color: #646464;
@@ -28,6 +28,9 @@ code {
 .navbar-inverse {
   background-color: @bar;
 }
+.affix-top,.affix{
+  position: static;
+}
 @media (min-width: 979px) {
   #sidebar.affix-top {
     position: static;
@@ -40,9 +43,12 @@ code {
     top:70px;
     width:228px;
   }
-  a[name] {
-    display: block;
-    margin-top: 50px;
+
+  #sidebar {
+    .nav {
+      margin-left: 2em;
+      font-size: .85em;
+    }
   }
   h2 {
     color: @h2;
@@ -55,5 +61,9 @@ code {
     code {
       font-size: 60%;
     }
+  }
+  #sidebar li.active > a {
+    border:0 @mainbg solid;
+    border-right-width:4px;
   }
 }

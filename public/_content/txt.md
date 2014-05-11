@@ -1,5 +1,4 @@
-<a name="about"></a>
-## About Mock Couch
+<h2 id="about">About Mock Couch</h2>
 
 Mock Couch is an npm module that allows you to create an HTTP server that mocks a CouchDB server by implementing the same RESTful API.
 
@@ -11,8 +10,7 @@ Mock Couch will emit events, so you can listen to them to see the result of your
 
 The project is hosted on [GitHub](https://github.com/chris-l/mock-couch). You can report bugs and discuss features on the [issues page](https://github.com/chris-l/mock-couch/issues)
 
-<a name="installation"></a>
-## Installation
+<h2 id="installation">Installation</h2>
 
 Mock Couch is available as an [npm module](https://www.npmjs.org/package/mock-couch).
 
@@ -20,8 +18,7 @@ Mock Couch is available as an [npm module](https://www.npmjs.org/package/mock-co
 npm install --save-dev mock-couch
 ```
 
-<a name="create"></a>
-## Create a Mock Couch Instance
+<h2 id="create">Create a Mock Couch Instance</h1>
 
 To create an instance, it's necesary to require the module, and then call the `createServer()` method.
 
@@ -33,7 +30,7 @@ The returned object is the **mock couch** instance, where the databases and docu
 
 Once is that is done, its necessary to start the server by calling the `listen()` method.
 
-<a name="createServer"></a>
+<a id="createServer"></a>
 ### createServer `mock.createServer()`
 
 Returns an object representing the **mock couch** instance.
@@ -41,13 +38,13 @@ Returns an object representing the **mock couch** instance.
 var mockCouch = mock.createServer();
 ```
 
-<a name="methods"></a>
-## Instance Methods
+<h2 id="methods">Instance Methods</h2>
 
 Each **mock couch** instance has the following methods:
 
-<a name="listen"></a>
-### listen `mockCouch.listen([port], arguments*)`
+<h3 id="listen">listen
+  <code>mockCouch.listen([port], arguments*)</code>
+</h3>
 
 Start listening HTTP request at the specified port. If no port was specified, it uses `5984` by default.
 
@@ -57,8 +54,9 @@ This function calls the `listen` function from restify with any arguments you pa
 mockCouch.listen(5984, function() {});
 ```
 
-<a name="close"></a>
-### close `mockCouch.close()`
+<h3 id="close">close
+  <code>mockCouch.close()</code>
+</h3>
 
 Closes the HTTP server.
 
@@ -68,8 +66,9 @@ This function calls the `close` function from restify.
 mockCouch.close();
 ```
 
-<a name="addDB"></a>
-### addDB `mockCouch.addDB(database name, [docs])`
+<h3 id="addDB">addDB
+  <code>mockCouch.addDB(database name, [docs])</code>
+</h3>
 
 Add a new database to the **mock couch** instance, and returns the database object.
 
@@ -83,8 +82,9 @@ var peopleDb = mockCouch.addDB('people', [
 peopleDb.first.value === 1; // true
 ```
 
-<a name="addDoc"></a>
-### addDoc `mockCouch.addDoc(database name, doc)`
+<h3 id="addDoc">addDoc
+  <code>mockCouch.addDoc(database name, doc)</code>
+</h3>
 
 Add a document to the specified database, and returns an object containing the `id` and the `_rev`.
 
@@ -97,13 +97,13 @@ var result = mockCouch.addDoc('people', { _id : 'third', value : 3 });
 result.id === 'third'; // true
 ```
 
-<a name="properties"></a>
-## Instance Properties
+<h2 id="properties">Instance Properties</h2>
 
 Each **mock couch** instance has the following properties:
 
-<a name="databases"></a>
-### databases `mockCouch.databases`
+<h3 id="databases">databases
+  <code>mockCouch.databases</code>
+</h3>
 
 Each **mock couch** instance has a `databases` public property which is an object and, just like its name indicates, contains the databases of that instance.
 
@@ -115,8 +115,7 @@ The database object has the following properties with information about the data
 
 * `__doc_count` : Return the number of documents in the database.
 
-<a name="views"></a>
-## Views
+<h2 id="views">Views</h2>
 
 Mock Couch allows to create and use views.
 
@@ -145,12 +144,10 @@ mockCouch.addDoc('mydatabase', {
 
 Then you can try the view from `http://localhost:5984/mydatabase/_design/myviews/_view/someview/`
 
-<a name="events"></a>
-## Events
+<h2 id="events">Events</h2>
 
 **TBD** (pretty soon!)
 
-<a name="license"></a>
-## License
+<h2 id="license">License</h2>
 
 **MIT**
