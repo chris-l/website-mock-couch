@@ -28,5 +28,9 @@
     },
     "prism" : "Prism",
     "modernizr" : "Modernizr"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/chris-l/website-mock-couch.git"
   }
 }
