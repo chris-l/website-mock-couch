@@ -31,6 +31,12 @@ code {
 .affix-top,.affix{
   position: static;
 }
+#sidebar {
+  .nav {
+    margin-left: 2em;
+    font-size: .85em;
+  }
+}
 @media (min-width: 979px) {
   #sidebar.affix-top {
     position: static;
@@ -44,12 +50,6 @@ code {
     width:228px;
   }
 
-  #sidebar {
-    .nav {
-      margin-left: 2em;
-      font-size: .85em;
-    }
-  }
   h2 {
     color: @h2;
     font-size: 35px;
@@ -65,5 +65,16 @@ code {
   #sidebar li.active > a {
     border:0 @mainbg solid;
     border-right-width:4px;
+  }
+}
+@media (max-width: 500px) {
+  h3 {
+    code {
+      font-size: 40%;
+    }
+  }
+  code {
+    font-size: 55%;
+    white-space: normal;
   }
 }
