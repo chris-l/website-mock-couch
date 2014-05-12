@@ -146,7 +146,64 @@ Then you can try the view from `http://localhost:5984/mydatabase/_design/myviews
 
 <h2 id="events">Events</h2>
 
-**TBD** (pretty soon!)
+Each HTTP request emit an event when is responded.
+
+**The name of the emitted event is the HTTP method of the request** (that is, the name can be GET, POST, PUT or DELETE), and the passed argument is an object that have details about the processed request.
+
+The properties of the object passed to each event are the following:
+
+### GET _all_dbs
+
+* `type` *String* The value `_all_dbs`.
+* `databases` *Array* A list with the names of the databases.
+
+### GET / POST _all_docs
+
+* `type` *String* The value `_all_docs`.
+* `database` *String* Name of the database.
+* `rows` *Array* A list with the rows from the database.
+
+### POST _bulk_docs
+
+* `type` *String* The value `_bulk_docs`
+* `docs` *Array* A list with the docs that just been inserted.
+
+### DELETE database
+
+* `type` *String* The value `database`
+* `database` *String* The name of the deleted database
+
+### DELETE document
+
+* `type` *String* The value `document`
+* `id` *String* The id of the deleted document
+
+### GET document
+
+* `type` *String* The value `document`
+* `id` *String* The id of the requested document
+* `doc` *Object* The requested document
+
+### GET / POST view
+
+* `type` *String* The value `view`
+* `name` *String* The name of the design document
+* `group` *Boolean* Is grouping being used?
+* `reduce` *Boolean* Is reduce being used?
+* `database` *String* The name of the database
+* `view` *String* The name of the view processed
+* `output` The result of view functions (map and optionally, reduce)
+
+### PUT database
+
+* `type` *String* The value `database`
+* `database` *String* The name of the database
+
+### PUT / POST document
+
+* `type` *String* The value `document`
+* `id` *String* The name of the document
+* `doc` *Object* The document
 
 <h2 id="license">License</h2>
 
