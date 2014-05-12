@@ -8,7 +8,15 @@ Since it will create an actual HTTP server, no matter if you use libraries like 
 
 Mock Couch will emit events, so you can listen to them to see the result of your test.
 
-The project is hosted on [GitHub](https://github.com/chris-l/mock-couch). You can report bugs and discuss features on the [issues page](https://github.com/chris-l/mock-couch/issues)
+Mock Couch is still under constant development, however it can already be used the way it is right now.
+
+The project is hosted on [GitHub](https://github.com/chris-l/mock-couch).
+
+Mock Couch is not attempting to fully implement CouchDB, but only the features necessary for unit testing CouchDB based apps.
+
+However, if there is a feature you need for your tests, feel free to add a feature request!
+
+You can report bugs and discuss features on the [issues page](https://github.com/chris-l/mock-couch/issues)
 
 <h2 id="installation">Installation</h2>
 
