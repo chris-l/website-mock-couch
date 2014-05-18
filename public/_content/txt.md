@@ -2,7 +2,7 @@
 
 Mock Couch is an npm module that allows you to create an HTTP server that mocks a CouchDB server by implementing the same RESTful API.
 
-It was desinged mostly for unit testing CouchDB based apps.
+It was designed mostly for unit testing CouchDB based apps.
 
 Since it will create an actual HTTP server, no matter if you use libraries like cradle or nano, your code should work out of the box.
 
