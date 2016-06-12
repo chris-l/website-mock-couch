@@ -3,7 +3,7 @@
 'use strict';
 var $ = require('jquery');
 require('modernizr');
-require('prism');
+require('prismjs-package');
 require('bootstrap');
 
 $('#sidebar').affix({
