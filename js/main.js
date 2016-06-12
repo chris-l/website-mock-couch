@@ -24,10 +24,10 @@ $('a').click(function() {
       anchor = $($.attr(this, 'href'));
 
   // Do animation if the anchor exists
-  if(anchor.length > 0) {
+  if (anchor.length > 0 || href === '#home') {
     $('html, body').animate({
-      scrollTop: anchor.offset().top - 0
-    }, 500,  function () {
+      scrollTop: href === '#home' ? 0 : Number(anchor.offset().top)
+    }, 500, function () {
       window.location.hash = href;
     });
     return false;
